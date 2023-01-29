@@ -29,7 +29,7 @@ if __name__ == '__main__':
                 newName=re.sub("20[0-9]{2}.", "", newName) 
                 
                 #recherche la chaine : commençant par S puis au moins 1 nombre puis un point ou non puis E puis au moins 1 nombre
-                resultatSearch=re.search("[Ss][0-9]+[\.]?E[0-9]+", newName)
+                resultatSearch=re.search("[Ss][0-9]+[\.]?[Ee][0-9]+", newName)
                 #recupère la chaine précédemment recherché, retire le . s'il est présent et force la majuscule pour les lettres
                 saisonEpisode=resultatSearch.group().replace('.','').upper()
                 
