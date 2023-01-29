@@ -36,7 +36,7 @@ if __name__ == '__main__':
                 #on récupère uniquement le titre de la série
                 newName=newName[:resultatSearch.span()[0]-1].upper()
                 
-                saison=re.search("S[0-9]+", resultatSearch.group()).group()
+                saison=re.search("S[0-9]+", saisonEpisode).group()
                 
                 #creation des dossiers pour le rangement
                 Path(cheminRangement+newName+'/'+saison).mkdir(parents=True, exist_ok=True)
